@@ -8,11 +8,11 @@ output "aa_name" {
 }
 
 output "aa_mi_name" {
-  value = azurerm_automation_account.az_aa.idenity
+  value = azurerm_automation_account.az_aa.identity
 }
 
 output "st_name" {
-  value = azurerm.storage_account.az_st.name
+  value = azurerm_storage_account.az_st.name
 }
 
 output "rb_name" {

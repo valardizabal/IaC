@@ -17,12 +17,13 @@ resource "azurerm_resource_group" "az_rg" {
   location = var.az_region
 }
 
-resource "azurerm_automtion_account" "az_aa" {
+resource "azurerm_automation_account" "az_aa" {
   name                = var.az_aa_name
   location            = azurerm_resource_group.az_rg.location
   resource_group_name = azurerm_resource_group.az_rg.name
   sku_name            = "Basic"
-  identity = {
+
+  identity {
     type = "SystemAssigned"
   }
 }
@@ -36,9 +37,13 @@ resource "azurerm_automation_runbook" "az_rb" {
   log_progress            = "true"
   description             = "This is an example runbook"
   runbook_type            = "PowerShell72"
+
+  draft {
+    edit_mode_enabled = "true"
+  }
 }
 
-resource "azurerm_storage_account" "az-st" {
+resource "azurerm_storage_account" "az_st" {
   name                     = var.az_st_name
   location                 = azurerm_resource_group.az_rg.location
   resource_group_name      = azurerm_resource_group.az_rg.name

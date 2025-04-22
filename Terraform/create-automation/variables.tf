@@ -25,6 +25,6 @@ variable "az_st_name" {
 }
 
 variable "az_rb_name" {
-  description = "Your Azure Automaion Run Book Name"
+  description = "Your Azure Automtion Run Book Name"
   type        = string
 }
