@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "location": {
+        "value": "southeast asia"
+      },
+      "adminUsername": {
+        "value": "azureadmin"
+      },
+      "authenticationType": {
+        "value": "password"
+      },
+      "adminPasswordOrKey": {
+        "value": "Password123!"
+      },
+      "vmName": {
+        "value": "vm-02-test"
+      },
+      "virtualNetworkName": {
+        "value": "vnet-02-test"
+      },
+      "subnetName": {
+        "value": "subnet1-02-test"
+      },
+      "networkSecurityGroupName": {
+        "value": "nsg-02-test"
+      }
+    }
+  }
+  
